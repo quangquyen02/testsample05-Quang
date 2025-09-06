@@ -172,9 +172,9 @@ nav {
 }
 
 .photo__items {
-  display: inline-flex;
+  display: flex;
   justify-content: space-between;
-  align-items: center;
+  margin: 0 auto;
   gap: 20px;
 }
 
@@ -571,6 +571,131 @@ p {
 .blog__content {
   width: 1320px;
   display: flex;
-  gap: 20px;
+  gap: 24px;
   margin-top: 50px;
 }
+.blog__info p {
+  font-family: var(--font-main);
+  color: var(--text-gray);
+}
+.blog__info h3 {
+  font-family: var(--font-main);
+  color: var(--text-white);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.blog__content figure {
+  position: relative;
+  overflow: hidden;
+}
+
+.blog__content img {
+  height: 424px;
+  width: 424px;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.blog__content figure:hover img {
+  transform: scale(1.1); /* zoom nhẹ ảnh khi hover */
+}
+
+/* Lớp mờ phủ toàn bộ ảnh */
+.blog__content figcaption {
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.blog__content figure:hover figcaption {
+  opacity: 1;
+}
+
+.blog__info {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  text-align: left;
+}
+
+.blog__info p {
+  font-size: 14px;
+  color: var(--text-gray);
+  margin-bottom: 10px;
+}
+
+.blog__info h3 {
+  font-size: 18px;
+  color: var(--text-white);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Lastest */
+
+.lastest {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.lastest h2 {
+  font-family: var(--font-main);
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.lastest__content {
+  width: 1320px;
+  display: flex;
+  gap: 24px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.lastest__content figure {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.lastest__content img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+/* Overlay */
+.lastest__content figcaption {
+  position: absolute;
+  inset: 0; /* full cover */
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+.lastest__content figcaption i {
+  color: var(--text-white);
+  font-size: 32px;
+}
+
+.lastest__content figure:hover figcaption {
+  opacity: 1;
+}
+
+.lastest__content figure:hover img {
+  transform: scale(1.1);
+}
+
+/* Contact */
