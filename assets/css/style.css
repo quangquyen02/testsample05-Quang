@@ -7,7 +7,9 @@
   --font-main: "Barlow", sans-serif;
   --color-main: #2db24a;
   --color-sub: #eaf7ed;
+  --color-line: #e6e8eb;
   --text-white: white;
+  --text-main: #132238;
   --text-gray: #87909d;
 }
 body {
@@ -16,6 +18,7 @@ body {
 }
 /* Header */
 #Header {
+  width: 100%;
   min-height: 836px;
   background-image: url(../img/header_pic.png);
   background-repeat: no-repeat;
@@ -95,6 +98,10 @@ nav {
   transition: all 0.3s ease;
 }
 
+.line__menu {
+  display: none;
+}
+
 /* Header__Banner */
 .banner {
   width: 100%;
@@ -106,7 +113,7 @@ nav {
 }
 
 .banner__container {
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
   margin-top: -200px;
   display: flex;
@@ -173,7 +180,7 @@ nav {
 
 .photo__items {
   display: flex;
-  justify-content: space-between;
+  margin: 0 auto;
   gap: 24px;
 }
 
@@ -210,7 +217,7 @@ nav {
 }
 /* Main-;ine */
 .main__line {
-  border: 1px solid var(--text-gray);
+  border: 1px solid var(--color-line);
 }
 /* About */
 .about {
@@ -252,8 +259,12 @@ nav {
 p {
   font-family: var(--font-main);
 }
+.about__itemleft p {
+  color: var(--text-gray);
+}
 .about h2 {
   margin-bottom: 10px;
+  color: var(--text-main);
 }
 .about__content {
   max-height: 536px;
@@ -263,6 +274,7 @@ p {
 .about__content span {
   font-family: var(--font-main);
   font-weight: 500;
+  color: var(--text-main);
 }
 .about__content h2 {
   font-family: var(--font-main);
@@ -270,12 +282,14 @@ p {
   font-size: 36px;
   margin-top: 20px;
   margin-bottom: 20px;
+  color: var(--text-main);
 }
 .about__content p {
   font-family: var(--font-main);
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
+  color: var(--text-main);
 }
 .about__icon span {
   margin-right: 10px;
@@ -341,6 +355,10 @@ p {
   font-weight: 400;
   margin-bottom: 20px;
   font-size: 48px;
+  color: var(--text-main);
+}
+.gallery__titlecontent p {
+  color: var(--text-gray);
 }
 .gallery__titlecontent {
   max-width: 561px;
@@ -410,11 +428,13 @@ p {
   font-size: 48px;
   font-weight: 400;
   margin-bottom: 10px;
+  color: var(--text-main);
 }
 .service__title p {
   font-family: var(--font-main);
   line-height: 1.5;
   max-width: 424px;
+  color: var(--text-gray);
 }
 .service__content {
   display: flex;
@@ -431,7 +451,7 @@ p {
 .service__items {
   display: flex;
   gap: 20px;
-  border: 1px solid var(--text-gray);
+  border: 1px solid var(--color-line);
   padding: 30px;
 }
 .service__items img {
@@ -442,10 +462,12 @@ p {
 .service__items h3 {
   font-family: var(--font-main);
   font-weight: 500;
+  color: var(--text-main);
 }
 .service__items p {
   font-family: var(--font-main);
   margin-top: 10px;
+  color: var(--text-gray);
 }
 .service__items:hover {
   border: 1px solid var(--color-main);
@@ -486,7 +508,7 @@ p {
   font-weight: 600;
 }
 .pricing h4 {
-  color: #132238;
+  color: var(--text-main);
   font-size: 18px;
   font-weight: 500;
 }
@@ -500,6 +522,7 @@ p {
 }
 .pricing p {
   margin-top: 12px;
+  color: var(--text-gray);
 }
 
 .pricing__card {
@@ -536,12 +559,13 @@ p {
   font-family: var(--font-main);
   line-height: 2.5;
   font-weight: 500;
+  color: var(--text-main);
 }
 .pricing__list i {
   min-width: 24px;
   min-height: 24px;
   margin-right: 8px;
-  font-size: 16px;
+  font-size: 24px;
 }
 .pricing__list .pricing__uncheck {
   text-decoration: line-through;
@@ -580,6 +604,7 @@ p {
   font-family: var(--font-main);
   font-size: 48px;
   font-weight: 400;
+  color: var(--text-main);
 }
 .blog__content {
   width: 1320px;
@@ -661,6 +686,7 @@ p {
   font-family: var(--font-main);
   font-size: 48px;
   font-weight: 400;
+  color: var(--text-main);
 }
 
 .lastest__content {
@@ -729,12 +755,15 @@ p {
   margin-top: 100px;
   justify-content: center;
   display: flex;
-  gap: 118px;
+  gap: 100px;
 }
 
 .contact-content {
   width: 500px;
-  padding: 50px;
+  padding: 50px 0;
+  border-right: 2px solid var(--color-line);
+  margin-right: -40px;
+  padding-right: 60px;
 }
 
 .flex-center {
@@ -749,6 +778,7 @@ p {
   line-height: 32px;
   margin-bottom: 15px;
   font-family: var(--font-main);
+  color: var(--text-main);
 }
 
 .contact-content p {
@@ -797,12 +827,12 @@ p {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  color: #556070;
+  color: var(--text-gray);
   font-family: var(--font-main);
 }
 
 .contact-items__content h3 a {
-  color: #0e1b2f;
+  color: var(--text-main);
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
@@ -815,6 +845,7 @@ p {
   font-size: 14px;
   line-height: 20px;
   font-family: var(--font-main);
+  color: var(--text-main);
 }
 
 .contact-social__items {
@@ -872,6 +903,7 @@ p {
   line-height: 32px;
   margin-bottom: 32px;
   font-family: var(--font-main);
+  color: var(--text-main);
 }
 
 .contact-form form {
@@ -1001,20 +1033,22 @@ h6 {
 .footer__logo span {
   margin-left: 10px;
   font-family: var(--font-main);
+  color: var(--text-main);
   font-weight: bolder;
   font-size: 24px;
 }
 .footer__nav h6 {
-  color: var(--text-gray);
+  color: var(--text-main);
   font-weight: 400;
+  font-size: 12px;
 }
 .footer__nav a {
   color: var(--text-gray);
 }
 .footer__list .footer_active {
-  color: #132238;
+  color: var(--text-main);
 }
 .footer__nav a:hover {
-  color: #132238;
+  color: var(--text-main);
   transition: all 0.3s ease;
 }
