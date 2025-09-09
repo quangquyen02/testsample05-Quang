@@ -434,7 +434,6 @@
 
 /* Mobile */
 @media (max-width: 955px) {
-  /* Navigation */
   .nav__list {
     display: none;
     flex-direction: column;
@@ -446,9 +445,6 @@
     padding: 20px 0;
     text-align: center;
     gap: 20px;
-  }
-  .main__line {
-    display: none;
   }
   .line__menu {
     display: block;
