@@ -69,7 +69,7 @@ nav {
 .nav__list a {
   text-decoration: none;
   font-family: var(--font-main);
-  font-weight: 600px;
+  font-weight: 600;
 }
 .nav__list li:not(:first-child) a {
   color: var(--text-gray);

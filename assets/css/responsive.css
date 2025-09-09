@@ -1,5 +1,6 @@
+/* PC */
 /* Tablet */
-@media (max-width: 1023px) {
+@media (max-width: 1310px) {
   /* Banner  */
 
   .banner__container {
@@ -302,26 +303,80 @@
   }
 
   /* Lastest */
-  .lastest {
-    margin-top: 60px;
-    margin-bottom: 60px;
-    width: 100%;
-    padding: 0 16px;
-    box-sizing: border-box;
+  .lastest__content {
+    width: 100%; /* full container */
+    justify-content: center; /* căn giữa các figure */
+    gap: 16px; /* giảm khoảng cách cho vừa */
+  }
+
+  .lastest__content figure {
+    width: 150px; /* giảm size ảnh trên màn hình nhỏ */
+    height: 150px;
   }
 
   .lastest h2 {
-    font-size: 36px;
+    font-size: 32px; /* giảm size title cho phù hợp */
     text-align: center;
-    margin-bottom: 32px;
+  }
+  /* Footer */
+  .contact__container {
+    width: 100%; /* full width container */
+    flex-direction: column; /* chuyển từ row sang column */
+    gap: 40px; /* giảm khoảng cách giữa content và form */
+    margin-top: 50px;
   }
 
-  /* Nội dung ảnh */
+  .contact-content {
+    width: 100%; /* full width nội dung */
+    border-right: none; /* bỏ border ở bên phải */
+    margin-right: 0;
+    padding: 30px 20px;
+  }
 
-  /* Footer */
+  .contact-form {
+    width: 100%; /* form full width */
+    padding: 30px 20px;
+  }
+
+  .contact-form form {
+    grid-template-columns: 1fr; /* input full width trên mobile/tablet */
+  }
+
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .contact-social {
+    padding: 20px;
+  }
+
+  .contact-social__items {
+    justify-content: flex-start;
+    padding-left: 40px;
+  }
+
+  .footer__nav {
+    width: 100%; /* full width footer nav */
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .footer__list {
+    gap: 12px;
+  }
+
+  .footer__logo {
+    justify-content: center;
+  }
 }
+
 /* Mobile */
-@media (max-width: 767px) {
+@media (max-width: 950px) {
   /* Navigation */
   .nav__list {
     display: none;
