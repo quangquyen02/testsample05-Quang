@@ -1,8 +1,59 @@
 /* PC */
 /* Tablet */
-@media (max-width: 1310px) {
-  /* Banner  */
+@media (min-width: 1546px) and (max-width: 1670px) {
+  .photo__items img {
+    width: 220px; /* từ 312px xuống 240px */
+    height: 320px; /* từ 424px xuống 320px */
+  }
 
+  /* Giảm khoảng cách */
+  .photo__items {
+    gap: 20px; /* từ 24px xuống 16px */
+  }
+
+  /* Điều chỉnh lại vị trí container để gọn hơn */
+  .photo__container {
+    bottom: -150px; /* nâng container lên một chút */
+  }
+  .service__pic img:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 1545px) {
+  .photo__items img {
+    width: 200px; /* từ 312px xuống 240px */
+    height: 280px; /* từ 424px xuống 320px */
+  }
+
+  /* Giảm khoảng cách */
+  .photo__items {
+    gap: 20px; /* từ 24px xuống 16px */
+  }
+
+  /* Điều chỉnh lại vị trí container để gọn hơn */
+  .photo__container {
+    bottom: -150px; /* nâng container lên một chút */
+  }
+
+  /* Giảm khoảng cách ảnh lẻ so với ảnh chẵn */
+  .photo__items img:nth-child(2),
+  .photo__items img:nth-child(4),
+  .photo__items img:nth-child(6) {
+    margin-top: 40px; /* từ 70px xuống 40px */
+  }
+  .photo__items img:nth-child(1),
+  .photo__items img:nth-child(6) {
+    display: block;
+  }
+  .service__pic img:nth-child(3) {
+    display: none;
+  }
+}
+@media (max-width: 1379px) {
+  /* Banner  */
+  .nav__list {
+    gap: 15px;
+  }
   .banner__container {
     flex-direction: column;
     gap: 30px;
@@ -35,7 +86,10 @@
   .photo__items img:nth-child(6) {
     margin-top: 0;
   }
-
+  .photo__items img:nth-child(1),
+  .photo__items img:nth-child(6) {
+    display: block;
+  }
   /* About */
   .about {
     width: 100%;
@@ -207,6 +261,9 @@
     width: 100%;
     justify-content: space-evenly;
   }
+  .service__pic img:nth-child(3) {
+    display: block;
+  }
 
   /* Pricing */
   .pricing {
@@ -376,7 +433,7 @@
 }
 
 /* Mobile */
-@media (max-width: 950px) {
+@media (max-width: 955px) {
   /* Navigation */
   .nav__list {
     display: none;
@@ -456,6 +513,10 @@
   .photo__items img:nth-child(4),
   .photo__items img:nth-child(6) {
     margin-top: 0;
+  }
+  .photo__items img:nth-child(1),
+  .photo__items img:nth-child(6) {
+    display: block;
   }
   /* About */
   .about {
@@ -674,6 +735,9 @@
     object-fit: cover;
     display: block;
   }
+  .service__pic img:nth-child(3) {
+    display: block;
+  }
   /* Pricing */
   .pricing {
     margin-top: 50px;
@@ -779,7 +843,7 @@
   }
 
   .lastest__content {
-    width: 100%;
+    width: 50%;
     gap: 10px;
     margin-top: 30px;
     justify-content: center;
@@ -1009,6 +1073,10 @@
   .photo__items img:nth-child(6) {
     margin-top: 0;
   }
+  .photo__items img:nth-child(1),
+  .photo__items img:nth-child(6) {
+    display: block;
+  }
   /* About */
   .about {
     width: 100%;
@@ -1204,6 +1272,9 @@
     width: 80%;
     height: 400px;
     object-fit: cover;
+  }
+  .service__pic img:nth-child(3) {
+    display: block;
   }
 
   /* Pricing */
@@ -1540,6 +1611,10 @@
   .photo__items img:nth-child(6) {
     margin-top: 0;
   }
+  .photo__items img:nth-child(1),
+  .photo__items img:nth-child(6) {
+    display: block;
+  }
   /* About */
   .about {
     width: 100%;
@@ -1736,7 +1811,9 @@
     height: 400px;
     object-fit: cover;
   }
-
+  .service__pic img:nth-child(3) {
+    display: block;
+  }
   /* Pricing */
   .pricing {
     margin-top: 50px;

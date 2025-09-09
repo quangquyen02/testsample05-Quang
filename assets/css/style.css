@@ -167,6 +167,11 @@ nav {
   opacity: 0.8;
   transition: all 0.3s ease;
 }
+.banner__btn .banner__btnchat:hover {
+  background-color: var(--color-main);
+  border: 2px solid var(--color-main);
+  transition: all 0.3s ease;
+}
 
 /* Header__photo */
 .photo__container {
@@ -379,7 +384,8 @@ p {
   font-weight: 500;
 }
 .gallery__titlebtn:hover {
-  opacity: 0.8;
+  background-color: var(--color-main);
+  color: var(--text-white);
   transition: all 0.3s ease;
 }
 .gallery__block {
