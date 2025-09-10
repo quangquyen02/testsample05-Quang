@@ -19,3 +19,8 @@
   width: $w;
   height: $h;
 }
+
+@mixin line-height($fs, $lh) {
+  font-size: $fs;
+  line-height: $lh;
+}
