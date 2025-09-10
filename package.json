@@ -1,0 +1,25 @@
+{
+  "name": "testsample5",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass scss/main.scss:css/style.css scss/reponsive.scss:css/reponsive.css --no-source-map --style=expanded",
+    "sass:watch": "sass --watch scss/main.scss:css/style.css scss/reponsive.scss:css/reponsive.css --no-source-map --style=expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quangquyen02/testsample05-Quang.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/quangquyen02/testsample05-Quang/issues"
+  },
+  "homepage": "https://github.com/quangquyen02/testsample05-Quang#readme",
+  "devDependencies": {
+    "sass": "^1.92.1"
+  }
+}
