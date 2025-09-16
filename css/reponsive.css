@@ -9,7 +9,7 @@
   .photo__container {
     bottom: -150px;
   }
-  .service__pic img:nth-child(3) {
+  .service__pic li:nth-child(3) {
     display: none;
   }
 }
@@ -1765,3 +1765,5 @@
     gap: 12px;
   }
 }
+
+/*# sourceMappingURL=reponsive.css.map */

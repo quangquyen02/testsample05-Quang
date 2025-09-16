@@ -25,13 +25,8 @@ body {
 
 // Header
 
-#Header {
+#header {
   width: 100%;
-  min-height: 836px;
-  background-image: url(../assets/img/header_pic.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   position: relative;
   overflow: visible;
 }
@@ -55,13 +50,11 @@ nav {
     border-radius: 100%;
     @include mix.flex-center-inline;
   }
-  span {
-    color: $color_2;
-    margin-left: 10px;
-    font-family: $font-family_1;
-    font-weight: bolder;
-    font-size: 24px;
-  }
+  color: $color_2;
+  font-family: $font-family_1;
+  font-weight: bolder;
+  font-size: 24px;
+  cursor: pointer;
 }
 .nav__list {
   @include mix.flex-center-column;
@@ -71,16 +64,10 @@ nav {
     text-decoration: none;
     font-family: $font-family_1;
     font-weight: 600;
-  }
-  li {
-    &:not(:first-child) {
-      a {
-        color: $color_3;
-        &:hover {
-          color: $color_2;
-          transition: all 0.3s ease;
-        }
-      }
+    color: $color_3;
+    &:hover {
+      color: $color_2;
+      transition: all 0.3s ease;
     }
   }
   .nav__active {
@@ -90,7 +77,7 @@ nav {
 .nav__btn {
   @include mix.flex-center-inline;
   gap: 10px;
-  color: $color_2;
+  color: $color_2 !important;
   background-color: $background-color_1;
   min-width: 218px;
   min-height: 48px;
@@ -104,9 +91,17 @@ nav {
 .line__menu {
   display: none;
 }
+.main {
+  margin-top: -96px;
+}
 .banner {
   @include mix.width-height(100%, 80vh);
   @include mix.flex-center-row;
+  min-height: 836px;
+  background-image: url(../assets/img/header_pic.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   align-items: center;
   padding: 20px;
 }
@@ -134,7 +129,7 @@ nav {
   margin: 30px auto;
   @include mix.flex-center-column;
   gap: 20px;
-  .banner__btnview {
+  .banner__btnview a {
     min-width: 187px;
     min-height: 48px;
     @include mix.flex-center-inline;
@@ -150,7 +145,7 @@ nav {
       transition: all 0.3s ease;
     }
   }
-  .banner__btnchat {
+  .banner__btnchat a {
     min-width: 187px;
     min-height: 48px;
     @include mix.flex-center-inline;
@@ -171,7 +166,7 @@ nav {
 .photo__container {
   @include mix.flex-center-row;
   position: absolute;
-  bottom: -200px;
+  bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -265,11 +260,6 @@ p {
   max-height: 536px;
   min-height: 396px;
   margin: 0 auto;
-  span {
-    font-family: $font-family_1;
-    font-weight: 500;
-    color: $color_4;
-  }
   h2 {
     font-family: $font-family_1;
     font-weight: 400;
@@ -287,10 +277,15 @@ p {
   }
 }
 .about__icon {
-  span {
-    margin-right: 10px;
-  }
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style-type: none;
+  font-family: $font-family_1;
+  font-weight: 500;
+  color: $color_4;
 }
+
 .about__btn {
   @include mix.flex-center-column;
   gap: 20px;
@@ -312,13 +307,23 @@ p {
       transition: all 0.3s ease;
     }
   }
-  i {
+  .about__btnsocial {
+    @include mix.flex-center-inline;
+    gap: 10px;
+    list-style-type: none;
+  }
+  .about__btnsocial i {
     color: $color_1;
     min-width: 48px;
     min-height: 48px;
     @include mix.flex-center-inline;
     border-radius: 100%;
     border: 1px solid $color_7;
+    &:hover {
+      background-color: $background-color_1;
+      color: $color_2;
+      transition: all 0.3s ease;
+    }
   }
 }
 
@@ -467,6 +472,7 @@ p {
   @include mix.width-height(312px, 505px);
   display: flex;
   gap: 50px;
+  list-style-type: none;
 }
 
 // Pricing
@@ -592,6 +598,7 @@ h4 {
   display: flex;
   gap: 24px;
   margin-top: 50px;
+  list-style-type: none;
   figure {
     position: relative;
     overflow: hidden;
@@ -661,6 +668,7 @@ h4 {
   gap: 24px;
   margin-top: 50px;
   flex-wrap: wrap;
+  list-style-type: none;
   figure {
     position: relative;
     @include mix.width-height(200px, 200px);
@@ -804,6 +812,7 @@ h4 {
   position: relative;
   padding-left: 36px;
   flex-wrap: wrap;
+  list-style-type: none;
   a {
     @include mix.width-height(48px, 48px);
     background: white;

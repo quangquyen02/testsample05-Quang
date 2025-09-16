@@ -9,13 +9,8 @@ body {
   scroll-behavior: smooth;
 }
 
-#Header {
+#header {
   width: 100%;
-  min-height: 836px;
-  background-image: url(../assets/img/header_pic.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   position: relative;
   overflow: visible;
 }
@@ -46,12 +41,12 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.nav__logo span {
+.nav__logo {
   color: white;
-  margin-left: 10px;
   font-family: "Barlow", sans-serif;
   font-weight: bolder;
   font-size: 24px;
+  cursor: pointer;
 }
 
 .nav__list {
@@ -64,11 +59,9 @@ nav {
   text-decoration: none;
   font-family: "Barlow", sans-serif;
   font-weight: 600;
-}
-.nav__list li:not(:first-child) a {
   color: #87909d;
 }
-.nav__list li:not(:first-child) a:hover {
+.nav__list a:hover {
   color: white;
   transition: all 0.3s ease;
 }
@@ -81,7 +74,7 @@ nav {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  color: white;
+  color: white !important;
   background-color: #2db24a;
   min-width: 218px;
   min-height: 48px;
@@ -97,11 +90,20 @@ nav {
   display: none;
 }
 
+.main {
+  margin-top: -96px;
+}
+
 .banner {
   width: 100%;
   height: 80vh;
   display: flex;
   justify-content: center;
+  min-height: 836px;
+  background-image: url(../assets/img/header_pic.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   align-items: center;
   padding: 20px;
 }
@@ -132,7 +134,7 @@ nav {
   align-items: center;
   gap: 20px;
 }
-.banner__btn .banner__btnview {
+.banner__btn .banner__btnview a {
   min-width: 187px;
   min-height: 48px;
   display: inline-flex;
@@ -146,11 +148,11 @@ nav {
   border: none;
   font-size: 16px;
 }
-.banner__btn .banner__btnview:hover {
+.banner__btn .banner__btnview a:hover {
   opacity: 0.8;
   transition: all 0.3s ease;
 }
-.banner__btn .banner__btnchat {
+.banner__btn .banner__btnchat a {
   min-width: 187px;
   min-height: 48px;
   display: inline-flex;
@@ -164,7 +166,7 @@ nav {
   border: 2px solid white;
   font-size: 16px;
 }
-.banner__btn .banner__btnchat:hover {
+.banner__btn .banner__btnchat a:hover {
   background-color: #2db24a;
   border: 2px solid #2db24a;
   transition: all 0.3s ease;
@@ -174,7 +176,7 @@ nav {
   display: flex;
   justify-content: center;
   position: absolute;
-  bottom: -200px;
+  bottom: -50px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -278,11 +280,6 @@ p {
   min-height: 396px;
   margin: 0 auto;
 }
-.about__content span {
-  font-family: "Barlow", sans-serif;
-  font-weight: 500;
-  color: #132238;
-}
 .about__content h2 {
   font-family: "Barlow", sans-serif;
   font-weight: 400;
@@ -299,8 +296,14 @@ p {
   color: #132238;
 }
 
-.about__icon span {
-  margin-right: 10px;
+.about__icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  list-style-type: none;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  color: #132238;
 }
 
 .about__btn {
@@ -328,7 +331,14 @@ p {
   opacity: 0.8;
   transition: all 0.3s ease;
 }
-.about__btn i {
+.about__btn .about__btnsocial {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  list-style-type: none;
+}
+.about__btn .about__btnsocial i {
   color: #2db24a;
   min-width: 48px;
   min-height: 48px;
@@ -337,6 +347,11 @@ p {
   align-items: center;
   border-radius: 100%;
   border: 1px solid #eaf7ed;
+}
+.about__btn .about__btnsocial i:hover {
+  background-color: #2db24a;
+  color: white;
+  transition: all 0.3s ease;
 }
 
 .gallery {
@@ -494,6 +509,7 @@ p {
   height: 505px;
   display: flex;
   gap: 50px;
+  list-style-type: none;
 }
 
 .pricing {
@@ -628,6 +644,7 @@ h4 {
   display: flex;
   gap: 24px;
   margin-top: 50px;
+  list-style-type: none;
 }
 .blog__content figure {
   position: relative;
@@ -697,6 +714,7 @@ h4 {
   gap: 24px;
   margin-top: 50px;
   flex-wrap: wrap;
+  list-style-type: none;
 }
 .lastest__content figure {
   position: relative;
@@ -849,6 +867,7 @@ h4 {
   position: relative;
   padding-left: 36px;
   flex-wrap: wrap;
+  list-style-type: none;
 }
 .contact-social__items a {
   width: 48px;
@@ -1048,3 +1067,5 @@ h6 {
   font-weight: bolder;
   font-size: 24px;
 }
+
+/*# sourceMappingURL=style.css.map */
