@@ -50,11 +50,14 @@ nav {
     border-radius: 100%;
     @include mix.flex-center-inline;
   }
-  color: $color_2;
-  font-family: $font-family_1;
-  font-weight: bolder;
-  font-size: 24px;
-  cursor: pointer;
+  span {
+    color: $color_2;
+    font-family: $font-family_1;
+    font-weight: bolder;
+    font-size: 24px;
+    cursor: pointer;
+    padding-left: 10px
+  }
 }
 .nav__list {
   @include mix.flex-center-column;
@@ -996,7 +999,7 @@ h6 {
     @include mix.flex-center-inline;
   }
   span {
-    margin-left: 10px;
+    padding-left: 10px;
     font-family: $font-family_1;
     color: $color_4;
     font-weight: bolder;
